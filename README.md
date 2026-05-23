@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# Farouk.Studio
 
-## Getting Started
+A polished portfolio website built with Next.js, React, Tailwind CSS, and GSAP animations. The project delivers a modern, interactive landing experience with smooth scrolling, animated page transitions, and a reusable component structure.
 
-First, run the development server:
+## Key Features
+
+- Responsive portfolio landing page with hero, about, projects, playground, and contact sections
+- Smooth scrolling and preloader wrapper for refined page transitions
+- GSAP-powered animation support through `@gsap/react`
+- Clean component-driven layout with reusable UI sections
+- Tailwind CSS v4 configured for modern styling and utility-first development
+
+## Project Structure
+
+- `app/` - Next.js App Router entrypoints and global layout
+- `app/page.tsx` - Main landing page layout that composes the page sections
+- `app/layout.tsx` - Root layout with metadata and global wrappers
+- `app/components/` - UI sections and page components
+- `app/components/wrapper/PreloaderWrapper.tsx` - Preloader wrapper component
+- `app/components/SmoothScroll.tsx` - Smooth scroll wrapper component
+- `public/` - Static assets and public files
+
+## Technologies
+
+- Next.js 16.2.2
+- React 19.2.4
+- Tailwind CSS 4
+- GSAP 3.14.2
+- Lenis smooth scroll library
+- Lucide React icons
+- TypeScript
+- ESLint
+
+## Setup
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site locally.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - start the Next.js development server
+- `npm run build` - build the production application
+- `npm run start` - run the production build locally
+- `npm run lint` - run ESLint checks
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is ready to deploy on platforms that support Next.js, such as Vercel or Netlify. For Vercel, simply connect the repository and use the default build command:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes
 
-## Deploy on Vercel
+- The app uses the Next.js App Router with a custom `RootLayout`
+- Styling is handled globally in `app/globals.css`
+- Page composition is managed through modular components imported in `app/page.tsx`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For updates or customization, modify the components under `app/components/` and adjust layout behavior in `app/layout.tsx`.
